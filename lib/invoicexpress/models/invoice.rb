@@ -86,11 +86,14 @@ module Invoicexpress
         when "Invoicexpress::Models::CashInvoice"
           invoice = Invoicexpress::Models::CoreCashInvoice.new(fields)
         when "Invoicexpress::Models::CreditNote"
-          fields.merge! owner_invoice_id: self.owner_invoice_id 
+          fields.merge! owner_invoice_id: self.owner_invoice_id
           invoice = Invoicexpress::Models::CoreCreditNote.new(fields)
         when "Invoicexpress::Models::DebitNote"
           fields.merge! owner_invoice_id: self.owner_invoice_id
           invoice = Invoicexpress::Models::CoreDebitNote.new(fields)
+        when "Invoicexpress::Models::InvoiceReceipts"
+          fields.merge! owner_invoice_id: self.owner_invoice_id
+          invoice = Invoicexpress::Models::InvoiceReceipts.new(fields)
         else
           invoice = Invoicexpress::Models::CoreInvoice.new(fields)
         end
