@@ -93,7 +93,7 @@ module Invoicexpress
           invoice = Invoicexpress::Models::CoreDebitNote.new(fields)
         when "Invoicexpress::Models::InvoiceReceipts"
           fields.merge! owner_invoice_id: self.owner_invoice_id
-          invoice = Invoicexpress::Models::InvoiceReceipts.new(fields)
+          invoice = Invoicexpress::Models::CoreInvoiceReceipt.new(fields)
         else
           invoice = Invoicexpress::Models::CoreInvoice.new(fields)
         end
