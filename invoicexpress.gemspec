@@ -10,6 +10,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'happymapper', '~> 0.4'
 
   spec.authors = ["Think Orange"]
+  spec.name = 'invoicexpress'
   spec.description = %q{Simple wrapper for invoicexpress.com API}
   spec.email = ['info@thinkorange.pt']
   spec.authors = ["Think Orange"]
@@ -28,4 +29,10 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'bundler', '~> 1.0'
   spec.add_development_dependency "rake"
+  #spec.add_development_dependency "rspec"
+  #spec.add_development_dependency "rspec-rails"
+
+  spec.add_dependency 'faraday', '~> 0.8'
+  spec.add_dependency 'faraday_middleware', '~> 0.9'
+  spec.add_dependency 'happymapper', '~> 0.4'
 end
