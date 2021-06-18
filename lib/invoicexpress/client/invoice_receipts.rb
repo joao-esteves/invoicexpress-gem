@@ -3,7 +3,7 @@ require 'invoicexpress/models'
 module Invoicexpress
   class Client
     module InvoiceReceipts
-      
+
       # Returns all your invoice receipts
       #
       # @option options [Integer] page (1) You can ask a specific page of invoice receipts
@@ -104,7 +104,7 @@ module Invoicexpress
       # @raise Invoicexpress::UnprocessableEntity When there are errors on the submission
       # @raise Invoicexpress::NotFound When the simplified invoice doesn't exist
       def update_invoice_receipt_state(invoice_receipt_id, simplified_invoice_state, options={})
-        raise(ArgumentError, "invoice receipt state has the wrong type") unless simplified_invoice_state.is_a?(Invoicexpress::Models::InvoiceState)
+        raise(ArgumentError, "invoice receipt state has the wrong type") unless simplified_invoice_state.is_a?(Invoicexpress::Models::InvoiceReceiptState)
 
         params = { :klass => Invoicexpress::Models::InvoiceReceipt, :body => simplified_invoice_state }
         put("invoice_receipts/#{invoice_receipt_id}/change-state.xml", params.merge(options))
