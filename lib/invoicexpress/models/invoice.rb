@@ -239,6 +239,14 @@ module Invoicexpress
       element :message, String
     end
 
+    class InvoiceReceiptState < BaseModel
+      include HappyMapper
+
+      tag 'invoice_receipt'
+      element :state, String
+      element :message, String
+    end
+
 
 
   end
