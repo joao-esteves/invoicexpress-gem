@@ -5,12 +5,11 @@ require 'invoicexpress/version'
 Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler', '~> 2.1.4'
 
-  spec.add_dependency 'faraday', '~> 1.3'
-  spec.add_dependency 'faraday_middleware', '~> 1.0.0'
+  spec.add_dependency 'faraday', '~> 0.8'
+  spec.add_dependency 'faraday_middleware', '~> 0.9'
   spec.add_dependency 'happymapper', '~> 0.4'
 
   spec.authors = ["Think Orange"]
-  spec.name = 'invoicexpress'
   spec.description = %q{Simple wrapper for invoicexpress.com API}
   spec.email = ['info@thinkorange.pt']
   spec.authors = ["Think Orange"]
@@ -27,8 +26,6 @@ Gem::Specification.new do |spec|
   spec.required_rubygems_version = '>= 1.3.6'
   spec.test_files = Dir.glob("spec/**/*")
 
+  spec.add_development_dependency 'bundler', '~> 1.0'
   spec.add_development_dependency "rake"
-  #spec.add_development_dependency "rspec"
-  #spec.add_development_dependency "rspec-rails"
-
 end
