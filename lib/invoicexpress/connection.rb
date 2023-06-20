@@ -1,4 +1,4 @@
-require 'faraday_middleware'
+# require 'faraday_middleware'
 require 'faraday/response/parse_xml'
 require 'faraday/response/raise_invoicexpress_errors'
 
