@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler', '~> 2.1.4'
 
   spec.add_dependency 'faraday'
-  spec.add_dependency 'faraday_middleware'
+  # spec.add_dependency 'faraday_middleware'
   spec.add_dependency 'happymapper', '~> 0.4'
 
   spec.authors = ["Think Orange"]
