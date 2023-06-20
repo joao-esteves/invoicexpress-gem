@@ -7,6 +7,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'faraday'
   # spec.add_dependency 'faraday_middleware'
+  spec.add_dependency 'faraday-follow_redirects'
   spec.add_dependency 'happymapper', '~> 0.4'
 
   spec.authors = ["Think Orange"]

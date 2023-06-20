@@ -24,7 +24,7 @@ module Invoicexpress
       connection = Faraday.new(options) do |builder|
         builder.request :url_encoded
 
-        builder.use FaradayMiddleware::FollowRedirects
+        builder.response :follow_redirects # builder.use FaradayMiddleware::FollowRedirects
         builder.use Faraday::Response::ParseXML, klass
         builder.use Faraday::Response::RaiseInvoicexpressErrors
 
